@@ -1,5 +1,8 @@
 import { defineConfig } from '@tarojs/cli'
 
+import AutoImport from 'unplugin-auto-import/webpack'
+import Components from 'unplugin-vue-components/webpack'
+
 import devConfig from './dev'
 import prodConfig from './prod'
 
@@ -32,11 +35,14 @@ export default defineConfig(async (merge, { command, mode }) => {
         // 别名配置
         alias: {
             '@': 'src',
-            '@components': 'src/components',
-            '@utils': 'src/utils',
             '@api': 'src/api',
             '@assets': 'src/assets',
-            '@styles': 'src/styles'
+            '@components': 'src/components',
+            '@models': 'src/models',
+            '@pages': 'src/pages',
+            '@stores': 'src/stores',
+            '@styles': 'src/styles',
+            '@utils': 'src/utils'
         },
 
         // 插件
@@ -56,17 +62,44 @@ export default defineConfig(async (merge, { command, mode }) => {
                     ignore: ['*.js', '*.css']
                 }
             ],
-            options: {
-            }
+            options: {}
         },
 
         // 小程序配置
         mini: {
+            parallel: true,
             // webpack 链式配置
             webpackChain(chain) {
+                // 自动导入 Vue 和 Pinia 相关 API
+                chain.plugin('unplugin-auto-import').use(
+                    AutoImport({
+                        // 需要自动导入的包
+                        imports: ['vue', 'pinia'],
+                        // 自动导入目录
+                        dirs: ['src/api', 'src/models', 'src/stores', 'src/utils'],
+                        // 生成 TypeScript 声明文件路径
+                        dts: 'types/auto-imports.d.ts',
+                        // 自定义解析器
+                        resolvers: []
+                    })
+                )
+
+                // 自动导入组件
+                chain.plugin('unplugin-vue-components').use(
+                    Components({
+                        // 组件目录
+                        dirs: ['src/components'],
+                        // 组件的有效文件扩展名
+                        extensions: ['vue'],
+                        // 生成 TypeScript 声明文件路径
+                        dts: 'types/components.d.ts',
+                        // 自定义解析器
+                        resolvers: []
+                    })
+                )
                 // 添加小程序 XML 处理插件
-                chain.plugin('miniXMLPlugin')
-                    .use('mini-xml-webpack-plugin', [{
+                chain.plugin('miniXMLPlugin').use('mini-xml-webpack-plugin', [
+                    {
                         // 折叠空白字符
                         collapseWhitespace: true,
                         // 移除注释
@@ -74,8 +107,9 @@ export default defineConfig(async (merge, { command, mode }) => {
                         // 不移除属性引号
                         removeAttributeQuotes: false,
                         // 移除空属性
-                        removeEmptyAttributes: true,
-                    }])
+                        removeEmptyAttributes: true
+                    }
+                ])
             },
             postcss: {
                 // px 转换配置
@@ -108,21 +142,14 @@ export default defineConfig(async (merge, { command, mode }) => {
             // 编译配置
             compile: {
                 // 排除目录
-                exclude: [
-                    'node_modules',
-                    'src/assets'
-                ]
+                exclude: ['node_modules', 'src/assets']
             },
             // 新增小程序编译优化配置
             optimizeMainPackage: {
                 // 是否启用主包优化
                 enable: true,
                 // 指定哪些文件要从主包中排除
-                excludeFiles: [
-                    'src/pages/*/components/**',
-                    'src/components/**/*.{js,ts,jsx,tsx,vue}',
-                    'src/utils/**/*.{js,ts}'
-                ]
+                excludeFiles: ['src/pages/*/components/**', 'src/components/**/*.{js,ts,jsx,tsx,vue}', 'src/utils/**/*.{js,ts}']
             }
         }
     }
