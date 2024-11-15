@@ -32,6 +32,6 @@
         ".env": ".env.*",
         "tsconfig.json": "tsconfig.*.json, env.d.ts",
         "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*, postcss.config.js",
-        "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, .npmrc, auto-import.d.ts, components.d.ts, babel.config.js, .hintrc, jsconfig.json, project.tt.json"
+        "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig, .npmrc, *.d.ts, babel.config.js, .hintrc, jsconfig.json, project.tt.json, .gitignore"
     }
 }
