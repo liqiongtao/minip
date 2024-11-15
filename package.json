@@ -1,0 +1,57 @@
+{
+    "name": "my-minip",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "templateInfo": {
+        "name": "vue3-pinia",
+        "typescript": false,
+        "css": "Sass",
+        "framework": "Vue3"
+    },
+    "scripts": {
+        "dev": "taro build --type weapp --watch",
+        "build": "taro build --type weapp"
+    },
+    "browserslist": [
+        "defaults and fully supports es6-module",
+        "maintained node versions"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/runtime": "^7.7.7",
+        "@tarojs/components": "4.0.7",
+        "@tarojs/helper": "4.0.7",
+        "@tarojs/plugin-platform-weapp": "4.0.7",
+        "@tarojs/plugin-platform-alipay": "4.0.7",
+        "@tarojs/plugin-platform-tt": "4.0.7",
+        "@tarojs/plugin-platform-swan": "4.0.7",
+        "@tarojs/plugin-platform-jd": "4.0.7",
+        "@tarojs/plugin-platform-qq": "4.0.7",
+        "@tarojs/plugin-platform-h5": "4.0.7",
+        "@tarojs/runtime": "4.0.7",
+        "@tarojs/shared": "4.0.7",
+        "@tarojs/taro": "4.0.7",
+        "@tarojs/plugin-framework-vue3": "4.0.7",
+        "vue": "^3.2.24",
+        "pinia": "^2.0.10"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "7.14.5",
+        "@babel/core": "^7.8.0",
+        "@tarojs/cli": "4.0.7",
+        "@tarojs/vite-runner": "4.0.7",
+        "babel-preset-taro": "4.0.7",
+        "eslint-config-taro": "4.0.7",
+        "eslint": "^8.12.0",
+        "stylelint": "^14.4.0",
+        "terser": "^5.16.8",
+        "vite": "^4.2.0",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "@vitejs/plugin-vue-jsx": "^3.0.0",
+        "eslint-plugin-vue": "^8.0.0",
+        "sass": "^1.60.0",
+        "postcss": "^8.4.18"
+    }
+}
