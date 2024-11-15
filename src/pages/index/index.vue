@@ -3,7 +3,7 @@
         <Counter />
         <view>1sd</view>
         <view>2s</view>
-        <view>3ssaasdfsaas</view>
+        <view>3ssaasdfsaa</view>
         <view>{{ name }}</view>
     </view>
 </template>
