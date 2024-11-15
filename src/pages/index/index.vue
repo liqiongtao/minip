@@ -2,7 +2,8 @@
     <view class="index">
         <Counter />
         <view>1sd</view>
-        <view>2sdss</view>
+        <view>2s</view>
+        <view>3ss</view>
     </view>
 </template>
 
