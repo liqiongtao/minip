@@ -865,7 +865,7 @@
     core-js-pure "^3.30.2"
     regenerator-runtime "^0.14.0"
 
-"@babel/runtime@^7.16.3", "@babel/runtime@^7.22.6", "@babel/runtime@^7.24.4", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.24.4", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4":
   version "7.26.0"
   resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.26.0.tgz#8600c2f595f277c60815256418b85356a65173c1"
   integrity sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==
@@ -1412,11 +1412,6 @@
   version "0.11.0"
   resolved "https://registry.npmmirror.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
-
-"@popperjs/core@^2.11.8":
-  version "2.11.8"
-  resolved "https://registry.npmmirror.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
-  integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
 "@rnx-kit/babel-preset-metro-react-native@^1.1.8":
   version "1.1.8"
@@ -2008,11 +2003,6 @@
   resolved "https://registry.npmmirror.com/@types/lodash/-/lodash-4.17.13.tgz#786e2d67cfd95e32862143abe7463a7f90c300eb"
   integrity sha512-lfx+dftrEZcdBPczf9d0Qv0x+j/rfNCMuC6OcfXmO8gkfeNAY88PgKUbvG56whcN23gc27yenwF6oJZXGFpYxg==
 
-"@types/lodash@4.14.182":
-  version "4.14.182"
-  resolved "https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.182.tgz#05301a4d5e62963227eaafe0ce04dd77c54ea5c2"
-  integrity sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q==
-
 "@types/minimatch@*":
   version "5.1.2"
   resolved "https://registry.npmmirror.com/@types/minimatch/-/minimatch-5.1.2.tgz#07508b45797cb81ec3f273011b054cd0755eddca"
@@ -2064,21 +2054,6 @@
   version "7.5.8"
   resolved "https://registry.npmmirror.com/@types/semver/-/semver-7.5.8.tgz#8268a8c57a3e4abd25c165ecd36237db7948a55e"
   integrity sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==
-
-"@types/sortablejs@^1.15.1":
-  version "1.15.8"
-  resolved "https://registry.npmmirror.com/@types/sortablejs/-/sortablejs-1.15.8.tgz#11ed555076046e00869a5ef85d1e7651e7a66ef6"
-  integrity sha512-b79830lW+RZfwaztgs1aVPgbasJ8e7AXtZYHTELNXZPsERt4ymJdjV4OccDbHQAvHrCcFpbF78jkm0R6h/pZVg==
-
-"@types/tinycolor2@^1.4.3":
-  version "1.4.6"
-  resolved "https://registry.npmmirror.com/@types/tinycolor2/-/tinycolor2-1.4.6.tgz#670cbc0caf4e58dd61d1e3a6f26386e473087f06"
-  integrity sha512-iEN8J0BoMnsWBqjVbWH/c0G0Hh7O21lpR2/+PrvAVgWdzL7eexIFm4JN/Wn10PTcmNdtS6U67r499mlWMXOxNw==
-
-"@types/validator@^13.7.17":
-  version "13.12.2"
-  resolved "https://registry.npmmirror.com/@types/validator/-/validator-13.12.2.tgz#760329e756e18a4aab82fc502b51ebdfebbe49f5"
-  integrity sha512-6SlHBzUW8Jhf3liqrGGXyTJSIFe4nqlJ5A5KaMZ2l/vbM3Wh3KSybots/wfWVzNLK4D1NZluDlSQIbIEPx6oyA==
 
 "@typescript-eslint/eslint-plugin@^6.2.0":
   version "6.21.0"
@@ -3132,11 +3107,6 @@ data-view-byte-offset@^1.0.0:
     es-errors "^1.3.0"
     is-data-view "^1.0.1"
 
-dayjs@1.11.10:
-  version "1.11.10"
-  resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.10.tgz#68acea85317a6e164457d6d6947564029a6a16a0"
-  integrity sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==
-
 debug@^3.2.7:
   version "3.2.7"
   resolved "https://registry.npmmirror.com/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
@@ -3350,9 +3320,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.5.41:
-  version "1.5.60"
-  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.5.60.tgz#29944afe568c58c40729e67af0f59f52d4d0ed32"
-  integrity sha512-HcraRUkTKJ+8yA3b10i9qvhUlPBRDlKjn1XGek1zDGVfAKcvi8TsUnImGqLiEm9j6ZulxXIWWIo9BmbkbCTGgA==
+  version "1.5.61"
+  resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.5.61.tgz#67e84c8943b635e56bdac19082ebbe4afc16528b"
+  integrity sha512-CcRGSBCBB6L9c3PBJWYYrBo6Bzeoi+GZTKvtuRtooJGWsINk+mOInZWcssU35zDTAwreVcrMimc9aMyPpehRNw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -5206,11 +5176,6 @@ minimist@^1.2.0, minimist@^1.2.6, minimist@^1.2.8:
   resolved "https://registry.npmmirror.com/minipass/-/minipass-7.1.2.tgz#93a9626ce5e5e66bd4db86849e7515e92340a707"
   integrity sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==
 
-mitt@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmmirror.com/mitt/-/mitt-3.0.1.tgz#ea36cf0cc30403601ae074c8f77b7092cdab36d1"
-  integrity sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==
-
 mlly@^1.4.2, mlly@^1.7.1, mlly@^1.7.2, mlly@^1.7.3:
   version "1.7.3"
   resolved "https://registry.npmmirror.com/mlly/-/mlly-1.7.3.tgz#d86c0fcd8ad8e16395eb764a5f4b831590cee48c"
@@ -6328,11 +6293,6 @@ sort-keys@^2.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-sortablejs@^1.15.0:
-  version "1.15.3"
-  resolved "https://registry.npmmirror.com/sortablejs/-/sortablejs-1.15.3.tgz#033668db5ebfb11167d1249ab88e748f27959e29"
-  integrity sha512-zdK3/kwwAK1cJgy1rwl1YtNTbRmc8qW/+vgXf75A7NHag5of4pyI6uK86ktmQETyWRH7IGaE73uZOOBcGxgqZg==
-
 "source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.1, source-map-js@^1.2.0, source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmmirror.com/source-map-js/-/source-map-js-1.2.1.tgz#1ce5650fddd87abc099eda37dcff024c2667ae46"
@@ -6685,32 +6645,6 @@ tar-stream@^1.5.2:
     to-buffer "^1.1.1"
     xtend "^4.0.0"
 
-tdesign-icons-vue-next@^0.2.4:
-  version "0.2.6"
-  resolved "https://registry.npmmirror.com/tdesign-icons-vue-next/-/tdesign-icons-vue-next-0.2.6.tgz#964be958cf8145271bf033f7f11093ee8baf5ff0"
-  integrity sha512-Se/3N6AAfbpEyJfuBUCMcBl26FCfwUYCf9OwEFp1dw0HhMeCd6LENoZx0o43/V69NpcUGp+0Ya+xVuNKiP8M+Q==
-  dependencies:
-    "@babel/runtime" "^7.16.3"
-
-tdesign-vue-next@^1.10.3:
-  version "1.10.3"
-  resolved "https://registry.npmmirror.com/tdesign-vue-next/-/tdesign-vue-next-1.10.3.tgz#5850e12c3d61db202cb93d81422cdc90a534a7e9"
-  integrity sha512-5CiK3Ov3s0NmhxreTYuN6OVh1MxGXAsFVFb3LD95iQegfnbe9vzt2/aoBSrKo6o3c6qeF1jBdLGMmyOhgDpR3w==
-  dependencies:
-    "@babel/runtime" "^7.22.6"
-    "@popperjs/core" "^2.11.8"
-    "@types/lodash" "4.14.182"
-    "@types/sortablejs" "^1.15.1"
-    "@types/tinycolor2" "^1.4.3"
-    "@types/validator" "^13.7.17"
-    dayjs "1.11.10"
-    lodash "^4.17.21"
-    mitt "^3.0.1"
-    sortablejs "^1.15.0"
-    tdesign-icons-vue-next "^0.2.4"
-    tinycolor2 "^1.6.0"
-    validator "^13.9.0"
-
 terser@^5.16.8, terser@^5.17.4:
   version "5.36.0"
   resolved "https://registry.npmmirror.com/terser/-/terser-5.36.0.tgz#8b0dbed459ac40ff7b4c9fd5a3a2029de105180e"
@@ -6749,11 +6683,6 @@ timed-out@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmmirror.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
   integrity sha512-G7r3AhovYtr5YKOWQkta8RKAPb+J9IsO4uVmzjl8AZwfhs8UcUwTiD6gcJYSgOtzyjvQKrKYn41syHbUWMkafA==
-
-tinycolor2@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.npmmirror.com/tinycolor2/-/tinycolor2-1.6.0.tgz#f98007460169b0263b97072c5ae92484ce02d09e"
-  integrity sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==
 
 tmp@^0.0.33:
   version "0.0.33"
@@ -7086,11 +7015,6 @@ validate-npm-package-name@^5.0.0:
   version "5.0.1"
   resolved "https://registry.npmmirror.com/validate-npm-package-name/-/validate-npm-package-name-5.0.1.tgz#a316573e9b49f3ccd90dbb6eb52b3f06c6d604e8"
   integrity sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==
-
-validator@^13.9.0:
-  version "13.12.0"
-  resolved "https://registry.npmmirror.com/validator/-/validator-13.12.0.tgz#7d78e76ba85504da3fee4fd1922b385914d4b35f"
-  integrity sha512-c1Q0mCiPlgdTVVVIJIrBuxNicYE+t/7oKeI9MWLj3fh/uq2Pxh/3eeWbVZ4OcGW1TUf53At0njHw5SMdA3tmMg==
 
 vite-plugin-static-copy@^0.17.1:
   version "0.17.1"

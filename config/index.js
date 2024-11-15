@@ -41,7 +41,6 @@ export default defineConfig(async (merge, { command, mode }) => {
             '@models': 'src/models',
             '@pages': 'src/pages',
             '@stores': 'src/stores',
-            '@styles': 'src/styles',
             '@utils': 'src/utils'
         },
 

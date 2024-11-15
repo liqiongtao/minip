@@ -1,18 +1,14 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-// import TDesign from 'tdesign-vue-next'
-// import 'tdesign-vue-next/dist/tdesign.min.css'
-
-import './styles/themes.scss'
+import './app.scss'
 
 const App = createApp({
     onShow(options) {
-        updateManager()
+        // updateManager()
     }
 })
 
-// App.use(TDesign)
 App.use(createPinia())
 
 export default App

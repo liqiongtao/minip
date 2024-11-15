@@ -7,7 +7,6 @@
         <view>{{ name }}</view>
         <view>APP_ID</view>
         <view>NODE_ENV</view>
-        <t-button type="primary">Primary Button</t-button>
     </view>
 </template>
 
