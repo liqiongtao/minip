@@ -1,11 +1,10 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import './app.scss'
+import './styles/themes.scss'
 
 const App = createApp({
-    onShow(options) {
-    },
+    onShow(options) {}
 })
 
 App.use(createPinia())
