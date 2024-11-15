@@ -27,7 +27,7 @@ export default defineConfig(async (merge, { command, mode }) => {
         // 框架
         framework: 'vue3',
         // 编译器
-        compiler: 'webpack5',
+        compiler: 'vite',
 
         // 别名配置
         alias: {
@@ -62,6 +62,21 @@ export default defineConfig(async (merge, { command, mode }) => {
 
         // 小程序配置
         mini: {
+            // webpack 链式配置
+            webpackChain(chain) {
+                // 添加小程序 XML 处理插件
+                chain.plugin('miniXMLPlugin')
+                    .use('mini-xml-webpack-plugin', [{
+                        // 折叠空白字符
+                        collapseWhitespace: true,
+                        // 移除注释
+                        removeComments: true,
+                        // 不移除属性引号
+                        removeAttributeQuotes: false,
+                        // 移除空属性
+                        removeEmptyAttributes: true,
+                    }])
+            },
             postcss: {
                 // px 转换配置
                 pxtransform: {
@@ -97,23 +112,6 @@ export default defineConfig(async (merge, { command, mode }) => {
                     'node_modules',
                     'src/assets'
                 ]
-            },
-            // 压缩配置
-            minifyXML: {
-                // 删除注释
-                deleteComments: true,
-                // 压缩空白
-                collapseWhitespace: true,
-                // 保持闭合斜杠
-                keepClosingSlash: true,
-                // 删除空属性
-                removeEmptyAttributes: true,
-                // 删除脚本类型属性
-                removeScriptTypeAttributes: true,
-                // 删除样式链接类型属性
-                removeStyleLinkTypeAttributes: true,
-                // 使用短文档类型
-                useShortDoctype: true
             },
             // 新增小程序编译优化配置
             optimizeMainPackage: {
