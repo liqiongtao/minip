@@ -1,9 +1,9 @@
 <template>
     <view class="index">
         <Counter />
-        <view>1sd</view>
-        <view>2s</view>
-        <view>3ssaasdfsaa</view>
+        <view>1ss</view>
+        <view>2ss</view>
+        <view>3ss</view>
         <view>{{ name }}</view>
         <view>APP_ID</view>
         <view>NODE_ENV</view>

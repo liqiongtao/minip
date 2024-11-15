@@ -24,6 +24,11 @@ export default defineConfig(async (merge, { command, mode }) => {
         // 输出目录
         outputRoot: 'dist',
 
+        // 框架
+        framework: 'vue3',
+        // 编译器
+        compiler: 'webpack5',
+
         // 别名配置
         alias: {
             '@': 'src',
@@ -55,27 +60,71 @@ export default defineConfig(async (merge, { command, mode }) => {
             }
         },
 
-        // 框架
-        framework: 'vue3',
-        // 编译器
-        compiler: 'vite',
-
         // 小程序配置
         mini: {
             postcss: {
+                // px 转换配置
                 pxtransform: {
+                    // 是否启用
                     enable: true,
-                    config: {
-
-                    }
+                    config: {}
                 },
+                // CSS Modules 配置
                 cssModules: {
+                    // 是否启用
                     enable: false,
                     config: {
+                        // 命名模式
                         namingPattern: 'module',
+                        // 生成的作用域名称
                         generateScopedName: '[name]__[local]___[hash:base64:5]'
                     }
+                },
+                // 静态资源配置
+                url: {
+                    // 是否启用
+                    enable: true,
+                    config: {
+                        // 文件大小限制(单位:字节)
+                        limit: 10240
+                    }
                 }
+            },
+            // 编译配置
+            compile: {
+                // 排除目录
+                exclude: [
+                    'node_modules',
+                    'src/assets'
+                ]
+            },
+            // 压缩配置
+            minifyXML: {
+                // 删除注释
+                deleteComments: true,
+                // 压缩空白
+                collapseWhitespace: true,
+                // 保持闭合斜杠
+                keepClosingSlash: true,
+                // 删除空属性
+                removeEmptyAttributes: true,
+                // 删除脚本类型属性
+                removeScriptTypeAttributes: true,
+                // 删除样式链接类型属性
+                removeStyleLinkTypeAttributes: true,
+                // 使用短文档类型
+                useShortDoctype: true
+            },
+            // 新增小程序编译优化配置
+            optimizeMainPackage: {
+                // 是否启用主包优化
+                enable: true,
+                // 指定哪些文件要从主包中排除
+                excludeFiles: [
+                    'src/pages/*/components/**',
+                    'src/components/**/*.{js,ts,jsx,tsx,vue}',
+                    'src/utils/**/*.{js,ts}'
+                ]
             }
         }
     }
