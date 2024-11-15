@@ -3,7 +3,7 @@
         <Counter />
         <view>1sd</view>
         <view>2s</view>
-        <view>3ss</view>
+        <view>3ssaasdfs</view>
     </view>
 </template>
 

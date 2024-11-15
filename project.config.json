@@ -4,11 +4,11 @@
     "appid": "wxf74db65684f8a609",
     "setting": {
         "urlCheck": true,
-        "es6": false,
-        "enhance": false,
-        "compileHotReLoad": false,
-        "postcss": false,
-        "minified": false
+        "es6": true,
+        "enhance": true,
+        "compileHotReLoad": true,
+        "postcss": true,
+        "minified": true
     },
     "compileType": "miniprogram"
 }
