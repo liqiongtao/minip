@@ -38,6 +38,8 @@ export default defineConfig(async (merge, { command, mode }) => {
         plugins: [],
         // 常量
         defineConstants: {
+            NODE_ENV: process.env.NODE_ENV,
+            APP_ID: process.env.TARO_APP_ID
         },
 
         // 复制文件

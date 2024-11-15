@@ -5,7 +5,8 @@
         <view>2s</view>
         <view>3ssaasdfsaa</view>
         <view>{{ name }}</view>
-        <view>{{ appid }}</view>
+        <view>APP_ID</view>
+        <view>NODE_ENV</view>
     </view>
 </template>
 
@@ -15,5 +16,7 @@
     import Counter from '../../components/Counter.vue'
 
     const name = ref('hnatao')
-    const appid = process.env.TARO_APP_ID
+
+    console.log('appId: APP_ID')
+    console.log('nodeEnv: NODE_ENV')
 </script>
