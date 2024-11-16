@@ -7,6 +7,7 @@
         <view>{{ name }}</view>
         <view>APP_ID</view>
         <view>NODE_ENV</view>
+        <nut-button>按钮</nut-button>
     </view>
 </template>
 

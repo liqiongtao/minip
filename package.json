@@ -19,6 +19,8 @@
     ],
     "dependencies": {
         "@babel/runtime": "^7.7.7",
+        "@nutui/nutui-taro": "^4.2.6",
+        "@nutui/icons-vue-taro": "^0.0.9",
         "@tarojs/components": "4.0.7",
         "@tarojs/helper": "4.0.7",
         "@tarojs/plugin-framework-vue3": "4.0.7",
@@ -34,22 +36,25 @@
     "devDependencies": {
         "@babel/core": "^7.8.0",
         "@babel/plugin-proposal-class-properties": "7.14.5",
+        "@vue/babel-plugin-jsx": "^1.0.6",
         "@tarojs/cli": "4.0.7",
-        "@tarojs/vite-runner": "4.0.7",
-        "@vitejs/plugin-vue": "^4.0.0",
-        "@vitejs/plugin-vue-jsx": "^3.0.0",
-        "babel-plugin-import": "^1.13.8",
         "babel-preset-taro": "4.0.7",
         "eslint": "^8.12.0",
         "eslint-config-taro": "4.0.7",
         "eslint-plugin-vue": "^8.0.0",
         "postcss": "^8.4.18",
         "prettier": "^3.3.3",
-        "sass": "^1.60.0",
-        "stylelint": "^14.4.0",
-        "terser": "^5.16.8",
         "unplugin-auto-import": "^0.18.4",
         "unplugin-vue-components": "^0.27.4",
-        "vite": "^4.2.0"
+        "@tarojs/taro-loader": "4.0.7",
+        "@tarojs/webpack5-runner": "4.0.7",
+        "@types/webpack-env": "^1.13.6",
+        "@vue/compiler-sfc": "^3.0.0",
+        "css-loader": "3.4.2",
+        "style-loader": "1.3.0",
+        "vue-loader": "^17.0.0",
+        "webpack": "5.91.0",
+        "sass": "^1.69.5",
+        "sass-loader": "^13.3.2"
     }
 }

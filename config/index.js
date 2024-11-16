@@ -2,6 +2,8 @@ import { defineConfig } from '@tarojs/cli'
 
 import AutoImport from 'unplugin-auto-import/webpack'
 import Components from 'unplugin-vue-components/webpack'
+import NutUIResolver from '@nutui/nutui-taro/dist/resolver'
+import path from 'path'
 
 import devConfig from './dev'
 import prodConfig from './prod'
@@ -30,7 +32,7 @@ export default defineConfig(async (merge, { command, mode }) => {
         // 框架
         framework: 'vue3',
         // 编译器
-        compiler: 'vite',
+        compiler: 'webpack5',
 
         // 别名配置
         alias: {
@@ -44,8 +46,15 @@ export default defineConfig(async (merge, { command, mode }) => {
             '@utils': 'src/utils'
         },
 
+        // 全局引入 NutUI 的样式变量
+        sass: {
+            data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`,
+            resource: [path.resolve(__dirname, '..', 'src/styles/theme.scss')]
+        },
+
         // 插件
         plugins: [],
+
         // 常量
         defineConstants: {
             NODE_ENV: process.env.NODE_ENV,
@@ -54,13 +63,7 @@ export default defineConfig(async (merge, { command, mode }) => {
 
         // 复制文件
         copy: {
-            patterns: [
-                {
-                    from: 'src/assets/',
-                    to: 'dist/assets/',
-                    ignore: ['*.js', '*.css']
-                }
-            ],
+            patterns: [],
             options: {}
         },
 
@@ -70,7 +73,7 @@ export default defineConfig(async (merge, { command, mode }) => {
             // webpack 链式配置
             webpackChain(chain) {
                 // 自动导入 Vue 和 Pinia 相关 API
-                chain.plugin('unplugin-auto-import').use(
+                chain.plugin('autoImport').use(
                     AutoImport({
                         // 需要自动导入的包
                         imports: ['vue', 'pinia'],
@@ -78,37 +81,24 @@ export default defineConfig(async (merge, { command, mode }) => {
                         dirs: ['src/api', 'src/models', 'src/stores', 'src/utils'],
                         // 生成 TypeScript 声明文件路径
                         dts: 'types/auto-imports.d.ts',
+                        // 使用 Vue 模板
+                        vueTemplate: true,
                         // 自定义解析器
-                        resolvers: []
+                        resolvers: [NutUIResolver()]
                     })
                 )
 
                 // 自动导入组件
-                chain.plugin('unplugin-vue-components').use(
+                chain.plugin('components').use(
                     Components({
                         // 组件目录
                         dirs: ['src/components'],
-                        // 组件的有效文件扩展名
-                        extensions: ['vue'],
                         // 生成 TypeScript 声明文件路径
                         dts: 'types/components.d.ts',
                         // 自定义解析器
-                        resolvers: []
+                        resolvers: [NutUIResolver({ taro: true })]
                     })
                 )
-                // 添加小程序 XML 处理插件
-                chain.plugin('miniXMLPlugin').use('mini-xml-webpack-plugin', [
-                    {
-                        // 折叠空白字符
-                        collapseWhitespace: true,
-                        // 移除注释
-                        removeComments: true,
-                        // 不移除属性引号
-                        removeAttributeQuotes: false,
-                        // 移除空属性
-                        removeEmptyAttributes: true
-                    }
-                ])
             },
             postcss: {
                 // px 转换配置
@@ -137,11 +127,6 @@ export default defineConfig(async (merge, { command, mode }) => {
                         limit: 10240
                     }
                 }
-            },
-            // 编译配置
-            compile: {
-                // 排除目录
-                exclude: ['node_modules', 'src/assets']
             },
             // 新增小程序编译优化配置
             optimizeMainPackage: {
