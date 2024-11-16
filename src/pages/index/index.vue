@@ -6,11 +6,11 @@
 </template>
 
 <script setup>
-import './index.scss'
+    import './index.scss'
 
-const show = ref(false)
-const onClick = () => {
-    show.value = true
-    // showToast('你点击了')
-}
+    const show = ref(false)
+    const onClick = () => {
+        show.value = true
+        // showToast('你点击了')
+    }
 </script>
