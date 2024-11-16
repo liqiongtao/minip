@@ -1,0 +1,16 @@
+{
+    "projectname": "my-minip-app",
+    "appid": "wxf74db65684f8a609",
+    "compileType": "miniprogram",
+    "libVersion": "2.32.3",
+    "simulatorType": "wechat",
+    "miniprogramRoot": "./dist",
+    "setting": {
+        "postcss": true,
+        "urlCheck": true,
+        "minified": true,
+        "compileHotReLoad": true,
+        "ignoreUploadUnusedFiles": true,
+        "useCompilerPlugins": ["sass"]
+    }
+}
