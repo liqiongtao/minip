@@ -95,6 +95,7 @@ export default defineConfig(async (merge, { command, mode }) => {
                 chain.plugin('unplugin-vue-components').use(
                     Components({
                         dirs: ['src/components'], // 指定组件所在的目录
+                        dts: 'types/components.d.ts', // 生成类型文件
                         resolvers: [NutUIResolver({ taro: true })] // 使用 NutUI 组件解析器
                     })
                 )
@@ -104,6 +105,7 @@ export default defineConfig(async (merge, { command, mode }) => {
                         imports: ['vue', 'pinia'], // 自动导入 Vue 和 Pinia 相关 API
                         dirs: ['src/api', 'src/models', 'src/stores', 'src/utils'], // 指定需要自动导入的目录
                         vueTemplate: true, // 在 Vue 模板中启用自动导入
+                        dts: 'types/auto-imports.d.ts', // 生成类型文件
                         resolvers: [NutUIResolver({ taro: true })] // 使用 NutUI 组件解析器
                     })
                 )
