@@ -1,5 +1,5 @@
 export default {
-    mini: {
+    env: {
         NODE_ENV: '"production"'
     }
 }
