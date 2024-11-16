@@ -13,7 +13,8 @@
     },
     "scripts": {
         "dev": "taro build --type weapp --watch",
-        "build": "taro build --type weapp"
+        "build": "taro build --type weapp",
+        "lint": "eslint src"
     },
     "browserslist": [
         "last 3 versions",
